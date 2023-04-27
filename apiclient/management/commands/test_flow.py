@@ -57,6 +57,10 @@ class Command(BaseCommand):
                     "Проверка записи пользователя на сессию не пройдена"
                 )
 
+        except exceptions.CoursesReceiveError:
+            self._error_message("Ошибка при получении списка курсов")
+            raise
+
         except exceptions.UserCreateError:
             self._error_message("Ошибка при создании пользователя")
             raise
