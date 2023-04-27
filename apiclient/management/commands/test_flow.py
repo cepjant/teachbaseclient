@@ -69,6 +69,10 @@ class Command(BaseCommand):
             self._error_message("Ошибка при попытке записать пользователя на сессию")
             raise
 
+        except exceptions.CourseSessionDetailReceiveError:
+            self._error_message("Ошибка при получении детальной информации по сессии курса")
+            raise
+
     def create_user(self) -> dict:
         """Создание пользователя"""
 
