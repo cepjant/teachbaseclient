@@ -74,7 +74,9 @@ class Command(BaseCommand):
             raise
 
         except exceptions.CourseSessionDetailReceiveError:
-            self._error_message("Ошибка при получении детальной информации по сессии курса")
+            self._error_message(
+                "Ошибка при получении детальной информации по сессии курса"
+            )
             raise
 
     def create_user(self) -> dict:
