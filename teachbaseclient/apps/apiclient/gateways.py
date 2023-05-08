@@ -5,7 +5,7 @@ import requests
 
 from django.conf import settings
 
-from apiclient import exceptions
+from teachbaseclient.apps.apiclient import exceptions
 
 
 class TeachbaseGateway:

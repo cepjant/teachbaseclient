@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ApiclientConfig(AppConfig):
+class CoursesConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "apiclient"
+    name = "teachbaseclient.apps.courses"

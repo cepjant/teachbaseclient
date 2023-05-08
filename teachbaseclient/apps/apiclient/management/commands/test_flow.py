@@ -6,8 +6,8 @@ from typing import NoReturn
 
 from django.core.management.base import BaseCommand
 
-from apiclient import exceptions
-from apiclient.gateways import TeachbaseGateway
+from teachbaseclient.apps.apiclient import exceptions
+from teachbaseclient.apps.apiclient.gateways import TeachbaseGateway
 
 
 class Command(BaseCommand):
