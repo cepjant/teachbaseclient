@@ -1,13 +1,11 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from teachbaseclient.apps.courses.models.mixins import (
-    TrackingFieldsMixin
-)
+from teachbaseclient.apps.courses.models.mixins import TrackingFieldsMixin
 
 
 class CourseType(TrackingFieldsMixin, models.Model):
-    """ Модель типа курса """
+    """Модель типа курса"""
 
     name = models.TextField(
         verbose_name=_("name"),

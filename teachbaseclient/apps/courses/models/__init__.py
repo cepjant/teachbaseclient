@@ -1,11 +1,11 @@
-from .author import Author
-from .course import Course  #
-from .coursetype import CourseType #
-from .material import Material
-from .owner import Owner
-from .poll import Poll
-from .quizz import Quizz
-from .scorm_package import ScormPackage
-from .section import Section
-from .task import Task
-from .xapi_package import XAPIPackage
+from .author import Author  # NOQA
+from .course import Course  # NOQA
+from .coursetype import CourseType  # NOQA
+from .material import Material  # NOQA
+from .owner import Owner  # NOQA
+from .poll import Poll  # NOQA
+from .quizz import Quizz  # NOQA
+from .scorm_package import ScormPackage  # NOQA
+from .section import Section  # NOQA
+from .task import Task  # NOQA
+from .xapi_package import XAPIPackage  # NOQA

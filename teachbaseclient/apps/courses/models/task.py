@@ -2,31 +2,23 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from teachbaseclient.apps.courses.models.mixins import (
-    TrackingFieldsMixin, SectionBasedModelMixin
+    TrackingFieldsMixin,
+    SectionBasedModelMixin,
 )
 
 
 class Task(TrackingFieldsMixin, SectionBasedModelMixin, models.Model):
+    """Задача в секции курса"""
 
-    name = models.TextField(
-        verbose_name=_("name")
-    )
+    name = models.TextField(verbose_name=_("name"))
 
-    description = models.TextField(
-        verbose_name=_("description")
-    )
+    description = models.TextField(verbose_name=_("description"))
 
-    score = models.IntegerField(
-        verbose_name=_("score")
-    )
+    score = models.IntegerField(verbose_name=_("score"))
 
-    required = models.BooleanField(
-        verbose_name=_("required")
-    )
+    required = models.BooleanField(verbose_name=_("required"))
 
-    team_passage = models.BooleanField(
-        verbose_name=_("team passage")
-    )
+    team_passage = models.BooleanField(verbose_name=_("team passage"))
 
     allow_incomplete_score = models.BooleanField(
         verbose_name=_("allow incomplete score")

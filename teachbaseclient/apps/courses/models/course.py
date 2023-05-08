@@ -2,13 +2,11 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from django.utils.translation import gettext_lazy as _
 
-from teachbaseclient.apps.courses.models.mixins import (
-    TrackingFieldsMixin
-)
+from teachbaseclient.apps.courses.models.mixins import TrackingFieldsMixin
 
 
 class Course(TrackingFieldsMixin, models.Model):
-    """ Модель курса """
+    """Модель курса"""
 
     name = models.TextField(
         verbose_name=_("name"),
@@ -19,10 +17,7 @@ class Course(TrackingFieldsMixin, models.Model):
     )
 
     owner = models.ForeignKey(
-        verbose_name=_("owner"),
-        to="Owner",
-        on_delete=models.SET_NULL,
-        null=True
+        verbose_name=_("owner"), to="Owner", on_delete=models.SET_NULL, null=True
     )
 
     thumb_url = models.TextField(
@@ -100,8 +95,7 @@ class Course(TrackingFieldsMixin, models.Model):
     )
 
     competences = ArrayField(
-        verbose_name=_("competences"),
-        base_field=models.TextField()
+        verbose_name=_("competences"), base_field=models.TextField()
     )
 
     class Meta:
